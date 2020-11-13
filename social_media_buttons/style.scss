@@ -1,0 +1,73 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.page {
+    height: 1000px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    background-color: #c3cfe2;
+    font-size: 14px;
+}
+
+@mixin flexbox-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin shift-to-left {
+    &:hover{
+        transform: translateX(-150px);
+        transition: transform 750ms;
+    }
+}
+
+.social-media{
+    position: fixed;
+    top: 200px;
+    right: -435px;
+    width: 500px;
+
+    &__blog {
+        background-color: #e17b77;
+        @include flexbox-link;
+        @include shift-to-left;
+    }
+
+    &__facebook {
+        background-color: #3b5998;
+        @include flexbox-link;
+        @include shift-to-left;
+    }
+
+    &__twitter {
+        background-color: #00aced;
+        @include flexbox-link;
+        @include shift-to-left;
+    }
+
+    &__github {
+        background-color: #333;
+        @include flexbox-link;
+        @include shift-to-left;
+    }
+
+    &__linkedin {
+        background-color: #007bb6;
+        @include flexbox-link;
+        @include shift-to-left;
+    }
+}
+
+.social-media__blog--linkdesign{
+    margin-left: 30px;
+    text-decoration: unset;
+    color: lightgrey;
+    letter-spacing: 1px;
+}
+.social-media__blog--imgdesign{
+    padding: 8px;
+    height: 50px;
+    width: auto;
+}
